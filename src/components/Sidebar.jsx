@@ -125,12 +125,6 @@ const Sidebar = () => {
                 </a>
                 <ul className='sub-menu-stock bg-submenu w-full h-auto flex flex-col'>
                   <li className='w-full h-[50px] list-none flex flex-col items-center'>
-                    <Link to={'/stock'} className='h-full w-full flex items-center transition-all duration-[0.4s] hover:bg-gray pl-9 hover:text-submenu'>
-                      <FontAwesomeIcon icon={faBoxes} className="flex items-center justify-center min-w-[60px] text-[20px] transition-all duration-0" />
-                      <span>Reporte</span>
-                    </Link>
-                  </li>
-                  <li className='w-full h-[50px] list-none flex flex-col items-center'>
                     <Link to={'/modelP'} className='h-full w-full flex items-center transition-all duration-[0.4s] hover:bg-gray pl-9 hover:text-submenu'>
                       <TbCircleLetterP className='flex items-center justify-center min-w-[60px] text-[30px] transition-all duration-0'>P</TbCircleLetterP>
                       <span>Modelo P</span>

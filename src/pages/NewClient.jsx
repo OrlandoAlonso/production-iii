@@ -7,8 +7,8 @@ const NewClient = () => {
         <header className='w-full h-[74px] flex items-center justify-between px-6 border-b-2 border-white bg-dark-minus'>
             <h1 className='text-2xl font-bold text-white'>Clientes</h1>
             <div className='flex items-center gap-x-4 h-full'>
-                <Link to={'/clients'} className='text-white bg-primary w-[110px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center shadow-lg'>Volver</Link>
-                <button type='submit' className='text-white bg-primary w-[130px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center  shadow-lg'>
+                <Link to={'/clients'} className='text-white bg-primary w-[110px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center hover:bg-primary/40 hover:shadow-md'>Volver</Link>
+                <button type='submit' className='text-white bg-primary w-[130px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center hover:bg-primary/40 hover:shadow-md'>
                     Confirmar
                 </button>
             </div>

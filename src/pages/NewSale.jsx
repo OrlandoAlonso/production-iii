@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 //import icons
 import { LuFileInput } from "react-icons/lu";
 
-const NewBuy = () => {
+const NewSale = () => {
     return (
         <div className="ml-[250px] relative h-screen w-auto">
             <header className='w-full h-[74px] flex items-center justify-between px-6 border-b-2 border-white bg-dark-minus'>
-                <h1 className='text-2xl font-bold text-white'>Compra</h1>
+                <h1 className='text-2xl font-bold text-white'>Venta</h1>
                 <div className='flex items-center gap-x-4 h-full'>
                     <Link to={'/buys'} className='text-white bg-primary w-[110px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center hover:bg-primary/40 hover:shadow-md'>Volver</Link>
                     <button type='submit' className='text-white bg-primary w-[130px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center hover:bg-primary/40 hover:shadow-md'>Confirmar</button>
@@ -27,9 +27,9 @@ const NewBuy = () => {
                             </div>
                         </div>
                         <fieldset className='w-full flex items-center border-b-[1px] border'>
-                            <legend className='ml-2 px-2'>Información del proveedor</legend>
+                            <legend className='ml-2 px-2'>Información del cliente</legend>
                             <label htmlFor="provider" className='flex items-center py-3 px-4 w-1/2'>
-                                <p title='Proveedor' className='flex items-start w-1/4'>Proveedor</p>
+                                <p title='Proveedor' className='flex items-start w-1/4'>Cliente</p>
                                 <input type="text" name="provider" id="provider" className='w-3/4 h-[30px] border-none bg-gray/[0.2] px-4 rounded-lg' placeholder='...' />
                             </label>
                         </fieldset>
@@ -41,13 +41,13 @@ const NewBuy = () => {
                                         <p title='Producto' className='flex items-start w-full'>Producto</p>
                                         <input type="text" name="product" id="product" className='w-full h-[30px] border-none bg-gray/[0.2] px-4 rounded-lg' placeholder='...' />
                                     </label>
-                                    <label htmlFor="cost-buy" className='flex flex-col items-start gap-y-3 mb-4 w-2/6'>
-                                        <p title='Costo compra' className='flex items-start w-full'>Costo compra</p>
-                                        <input type="text" name="cost-buy" id="cost-buy" className='w-full h-[30px] border-none bg-gray/[0.2] px-4 rounded-lg' placeholder='{Costo compra}' disabled />
-                                    </label>
                                     <label htmlFor="price-sale" className='flex flex-col items-start gap-y-3 mb-4 w-2/6'>
                                         <p title='Precio venta' className='flex items-start w-full'>Precio venta</p>
                                         <input type="text" name="price-sale" id="price-sale" className='w-full h-[30px] border-none bg-gray/[0.2] px-4 rounded-lg' placeholder='{Precio Venta}' disabled />
+                                    </label>
+                                    <label htmlFor="stock" className='flex flex-col items-start gap-y-3 mb-4 w-1/6'>
+                                        <p title='Inventario' className='flex items-start w-full'>Inventario</p>
+                                        <input type="text" name="stock" id="stock" className='w-full h-[30px] border-none bg-gray/[0.2] px-4 rounded-lg' placeholder='100' disabled />
                                     </label>
                                     <label htmlFor="amount" className='flex flex-col items-start gap-y-3 mb-4 w-1/6'>
                                         <p title='Cantidad' className='flex items-start w-full'>Cantidad</p>
@@ -66,7 +66,7 @@ const NewBuy = () => {
                                     <tr className='leading-[1.5rem]'>
                                         <th className='border-y-[1px] border-white p-[0.3rem] text-left pl-4 w-[5px]'></th>
                                         <th className='border-y-[1px] border-x-[1px] border-white p-[0.3rem] text-left pl-4'>Producto</th>
-                                        <th className='border-y-[1px] border-r-[1px] border-white p-[0.3rem] text-left pl-4'>Costo compra</th>
+                                        <th className='border-y-[1px] border-r-[1px] border-white p-[0.3rem] text-left pl-4'>Precio</th>
                                         <th className='border-y-[1px] border-r-[1px] border-white p-[0.3rem] text-left pl-4'>Cantidad</th>
                                         <th className='border-y-[1px] border-white p-[0.3rem] text-left pl-4'>Subtotal</th>
                                     </tr>
@@ -82,14 +82,20 @@ const NewBuy = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <div className='w-1/5 h-[200px] mb-[1rem] p-2 flex flex-col items-center justify-between'>
-                            <div className='w-full flex flex-col items-start justify-center'>
-                                <p className='leading-8 font-medium'>Total a pagar:</p>
-                                <input className='w-full bg-white/60 h-[30px] rounded-lg placeholder:text-dark placeholder:px-2' type="text" placeholder='{Total}' disabled />
+                        <div className='w-1/5 h-[200px] mb-[1rem] px-2 flex flex-col items-center justify-between'>
+                            <div className='w-full flex flex-col items-start justify-center mb-4'>
+                                <p className='font-medium'>Total a pagar:</p>
+                                <input className='w-full bg-white/60 h-[25px] rounded-lg placeholder:text-dark placeholder:px-2' type="text" placeholder='{Total}' disabled />
+                                <div className='w-full flex flex-col items-start justify-center'>
+                                    <p className='font-medium'>Paga con:</p>
+                                    <input className='w-full bg-white text-dark pl-2 h-[25px] rounded-lg placeholder:text-dark' type="text" placeholder='{Paga}' />
+                                    <p className='font-medium'>Cambio:</p>
+                                    <input className='w-full bg-white text-dark pl-2 h-[25px] rounded-lg placeholder:text-dark' type="text" placeholder='{Cambio}' />
+                                </div>
                             </div>
                             <button title='Esto registrará una compra' className='w-full h-[50px] flex items-center justify-center gap-x-3 bg-primary rounded-xl hover:bg-primary/40 hover:shadow-lg'>
                                 <LuFileInput className='text-lg' />
-                                <p className='text-lg'>Registrar</p>
+                                <p className='text-lg'>Crear venta</p>
                             </button>
                         </div>
                     </div>
@@ -99,4 +105,4 @@ const NewBuy = () => {
     )
 }
 
-export default NewBuy
+export default NewSale

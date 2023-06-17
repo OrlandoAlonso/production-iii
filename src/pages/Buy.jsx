@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
 //import fontawesome icons
@@ -10,7 +10,7 @@ const Buy = () => {
     <div className='ml-[250px] relative h-screen w-auto'>
       <header className='w-full h-[74px] flex items-center justify-between px-6 border-b-2 border-white bg-dark-minus'>
         <h1 className='text-2xl font-bold text-white'>Compra</h1>
-        <Link to={'/buys/new'} className='text-white bg-primary w-[100px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center shadow-lg'>Nuevo</Link>
+        <Link to={'/buys/new'} className='text-white bg-primary w-[100px] h-1/2 rounded-lg hover:bg-blue/50 flex items-center justify-center hover:bg-primary/40 hover:shadow-md'>Nuevo</Link>
       </header>
       <main className='w-full h-full p-4'>
         <section className='w-full h-auto bg-dark-minus rounded-md p-6'>
@@ -35,7 +35,7 @@ const Buy = () => {
                 <option className='bg-gray/[0.8] border-none' value="3">Pago</option>
                 <option className='bg-gray/[0.8] border-none' value="3">Total</option>
               </select>
-              <button className='w-[30px] h-[30px] flex items-center justify-center bg-primary rounded-lg'>
+              <button className='w-[30px] h-[30px] flex items-center justify-center bg-primary rounded-lg hover:bg-primary/40 hover:shadow-md'>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[15px] text-white' />
               </button>
             </form>

@@ -21,6 +21,7 @@ import NewProvider from './pages/NewProvider.jsx';
 import NewProduct from './pages/NewProduct.jsx';
 import NewCategory from './pages/NewCategory.jsx';
 import NewBuy from './pages/NewBuy.jsx';
+import NewSale from './pages/NewSale.jsx';
 
 //import components
 import Sidebar from "./components/Sidebar.jsx";
@@ -44,6 +45,7 @@ function App() {
             <Route path='/buys' element={<Buy />} />
             <Route path='/buys/new' element={<NewBuy />} />
             <Route path='/sales' element={<Sale />} />
+            <Route path='/sales/new' element={<NewSale />} />
             <Route path='/stock' element={<Stock />} />
             <Route path='/modelP' element={<ModelP />} />
             <Route path='/modelQ' element={<ModelQ />} />
