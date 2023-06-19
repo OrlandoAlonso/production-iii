@@ -16,12 +16,12 @@ import Product from "./pages/Product.jsx";
 import Provider from "./pages/Provider.jsx";
 import Sale from "./pages/Sale.jsx";
 import Stock from "./pages/Stock.jsx";
-import NewClient from './pages/NewClient.jsx';
-import NewProvider from './pages/NewProvider.jsx';
-import NewProduct from './pages/NewProduct.jsx';
-import NewCategory from './pages/NewCategory.jsx';
-import NewBuy from './pages/NewBuy.jsx';
-import NewSale from './pages/NewSale.jsx';
+import NewClient from './pages/News/NewClient.jsx';
+import NewProvider from './pages/News/NewProvider.jsx';
+import NewProduct from './pages/News/NewProduct.jsx';
+import NewCategory from './pages/News/NewCategory.jsx';
+import NewBuy from './pages/News/NewBuy.jsx';
+import NewSale from './pages/News/NewSale.jsx';
 
 //import components
 import Sidebar from "./components/Sidebar.jsx";
